@@ -32,9 +32,9 @@ Limitación clave: esto mide el voto registrado en puestos ubicados en un barrio
 
 El análisis se puede acceder y compartir desde
 
-- [Twitter/X]()
+- [Twitter/X](https://x.com/3scorciav/status/2062150697143926884?s=20)
 
-- [Post en LinkedIn]()
+- [Post en LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7467917621511000064)
 
 ## Plomería de Datos
 
