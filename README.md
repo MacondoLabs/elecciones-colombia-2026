@@ -27,3 +27,24 @@ Conclusión: Barranquilla no giró completamente. Se apretó. Cepeda ganó la fo
 Metodología correcta: resultados por mesa/puesto + Divipole 2026 georreferenciada + polígonos oficiales de barrios/localidades. Cada puesto se asigna al barrio donde cae su coordenada. La Registraduría publica Divipole con geolocalización de puestos; Barranquilla tiene capa oficial de barrios.
 
 Limitación clave: esto mide el voto registrado en puestos ubicados en un barrio, no necesariamente la residencia exacta del votante. Para no vender humo, el mapa debe decir “puesto ubicado en X barrio”, no “todo el barrio votó X”.
+
+## Links externos
+
+El análisis se puede acceder y compartir desde
+
+- [Twitter/X]()
+
+- [Post en LinkedIn]()
+
+## Plomería de Datos
+
+El codigo usado para el análisis esta [aquí](./analisis.py), para correrlo en otras ciudades:
+
+```python
+MEDELLIN = City("MEDELLIN", dept_code=1, mun_code=1)   # ejemplo: validar códigos
+CALI = City("CALI", dept_code=31, mun_code=1)          # ejemplo: validar códigos
+```
+
+## Agradecimientos
+
+Hecho por [@escorciav](https://github.com/escorciav), con amor, paciencia e IA
