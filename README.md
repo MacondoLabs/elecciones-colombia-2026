@@ -45,6 +45,59 @@ MEDELLIN = City("MEDELLIN", dept_code=1, mun_code=1)   # ejemplo: validar códig
 CALI = City("CALI", dept_code=31, mun_code=1)          # ejemplo: validar códigos
 ```
 
+### Mapeo de datos
+
+La parte del [mapeo/gráficas](./color_mapping.py)
+
+```bash
+python color_mapping.py \
+  --input outputs/barranquilla_by_barrio_long.csv \
+  --city Barranquilla \
+  --output outputs/barranquilla_color_mapping.csv \
+  --format wide 
+```
+
+### Detalles
+
+JSON output:
+
+```bash
+python color_mapping.py \
+  --input outputs/barranquilla_by_barrio_long.csv \
+  --city Barranquilla \
+  --output outputs/barranquilla_color_mapping.json
+```
+
+Expected long format from `analisis.py`
+
+```csv
+city,area_id,area_name,candidate,votes
+Barranquilla,080010001,El Prado,Iván Cepeda,1234
+Barranquilla,080010001,El Prado,Abelardo de la Espriella,1456
+```
+
+Expected wide format:
+
+```csv
+city,area_id,area_name,cepeda_votes,abelardo_votes
+Barranquilla,080010001,El Prado,1234,1456
+```
+
+Output includes:
+
+```csv
+city,area_id,area_name,abelardo_votes,cepeda_votes,winner_key,winner_label,fill_color
+Barranquilla,080010001,El Prado,1456,1234,ABELARDO,Abelardo,#071A78
+```
+
+Color theme:
+
+```
+ABELARDO = "#071A78"  # deep blue
+CEPEDA   = "#B63A2E"  # brick red
+NO_DATA  = "#D8D2C4"  # warm gray
+```
+
 ## Agradecimientos
 
 Hecho por [@escorciav](https://github.com/escorciav), con amor, paciencia e IA
